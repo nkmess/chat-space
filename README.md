@@ -44,7 +44,7 @@ Things you may want to cover:
 |name|string|null: false|
 
 ### Association
-- belongs_to :user, through: :members
+- has_many :user, through: :members
 - has_many :members
 - has_many :messages
 
