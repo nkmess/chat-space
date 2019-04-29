@@ -27,7 +27,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false|
-|name|string|null: false|
+|name|string|null: false, unique: true, add_index|
 |email|string|null: false, unique: true|
 |password|string|null: false, unique: true|
 
@@ -68,6 +68,6 @@ Things you may want to cover:
 |group_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
 
-### Asociation
+### Association
 - belongs_to :group
 - belongs_to:user
