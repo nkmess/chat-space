@@ -12,7 +12,7 @@ html, body {
     .side-header {
       background-color: #253141;
       height: 100px;
-      color: #ffffff;
+      color: $white;
       line-height: 100px;
       padding: 0px 20px;
       &__user-name {
@@ -27,10 +27,10 @@ html, body {
       li {
         display: inline;
         .fa.fa-edit {
-          color: #ffffff;
+          color: $white;
         }
         .fa.fa-cog {
-          color: #ffffff;
+          color: $white;
         }
       }
     }
@@ -41,7 +41,7 @@ html, body {
       padding: 20px;
       box-sizing: border-box;
       .group {
-        color: #FFFFFF;
+        color: $white;
         font-weight: bold;
         &__group-name {
           font-size: 15px;
@@ -79,13 +79,13 @@ html, body {
       }
       .main-header__edit-btn {
         float: right;
-        color: #38aef0;
+        color: $light_blue;
         height: 40px;
         line-height: 40px;
         margin-top: 28px;
         margin-right: 40px;
         padding: 0px 20px;
-        border: 1px solid #38aef0;
+        border: 1px solid $light_blue;
       }
     }
 
@@ -153,8 +153,8 @@ html, body {
         .form__submit-btn {
           height: 50px;
           width: 100px;
-          background-color: #38AEF0;
-          color: white;
+          background-color: $light_blue;
+          color: $white;
           margin-left: 15px;
           padding: 0px 30px;
         }
