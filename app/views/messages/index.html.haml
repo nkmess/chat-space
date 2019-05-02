@@ -1,21 +1,6 @@
 .wrapper
-  .side
-    .side-header
-      %p.side-header__user-name hanako
-      %ul.user-menu
-        %li.user-name__new-group 
-          =link_to root_path do
-            %i.fa.fa-edit
-        %li.user-name__edit-account
-          =link_to root_path do
-            %i.fa.fa-cog
-    .groups 
-      .group
-        %p.group__group-name sample
-        %p.group__latest-message hello
-      .group
-        %p.group__group-name sample2
-        %p.group__latest-message hello2
+  = render 'messages/side'
+
   .main
     .main-header 
       .current-group
