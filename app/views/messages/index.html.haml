@@ -1,0 +1,30 @@
+.wrapper
+  = render 'messages/side'
+
+  .main
+    .main-header 
+      .current-group
+        %p.current-group__name sample
+        %p.member-list Member : aaa bbb
+      .main-header__edit-btn Edit
+    .messages 
+      .message
+        .info
+          %p.info__user-name  aaa
+          %p.info__date 2019/5/1(Wed) 09:00:00
+        %p.message-text hello
+      .message
+        .info
+          %p.info__user-name  bbb
+          %p.info__date 2019/5/1(Wed) 09:03:00
+        %p.message-text hi
+
+    .form 
+      %form.new-message
+        .input-box
+          %input.form__text{placeholder: "type a message"}
+          %label.image-label
+            %i.fa.fa-image
+            %input.form__image{type: "file"}
+        %input.form__submit-btn{type: "submit", value: "Send"}
+        
