@@ -6,7 +6,9 @@
       .current-group
         %p.current-group__name sample
         %p.member-list Member : aaa bbb
-      .main-header__edit-btn Edit
+      .edit-header
+        = link_to edit_group_path(current_user) do
+          .edit-btn Edit
     .messages 
       .message
         .info
