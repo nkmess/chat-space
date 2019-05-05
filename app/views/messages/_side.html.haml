@@ -4,7 +4,7 @@
       = current_user.name
     %ul.user-menu
       %li.user-name__new-group 
-        =link_to root_path do
+        =link_to new_group_path do
           %i.fa.fa-edit
       %li.user-name__edit-account
         =link_to edit_user_path(current_user) do
