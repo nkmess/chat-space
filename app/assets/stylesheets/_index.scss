@@ -29,7 +29,7 @@ html, body {
         }
       }
       .edit-header {
-        .edit-btn {
+        &__btn {
           float: right;
           color: $light_blue;
           height: 40px;
@@ -41,7 +41,7 @@ html, body {
         }
       }
     }
-    
+
     .messages {
       background-color: #fafafa;
       height: calc(100vh - 190px);
