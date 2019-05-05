@@ -11,9 +11,9 @@
           %i.fa.fa-cog
   .groups 
     .group
-      %p.group__group-name sample
-      %p.group__latest-message hello
-    .group
-      %p.group__group-name sample2
-      %p.group__latest-message hello2
-      
+      - current_user.groups.each do |group|
+        = link_to groups_path(group) do
+          .group__group-name
+            = group.name
+          .group__latest-message
+            メッセージはまだありません。
