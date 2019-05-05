@@ -33,13 +33,17 @@
     padding: 20px;
     box-sizing: border-box;
     .group {
-      color: $white;
       font-weight: bold;
+      a {
+        text-decoration: none;
+      }
       &__group-name {
+        color: $white;
         font-size: 15px;
         padding-bottom: 5px;
       }
       &__latest-message {
+        color: $white;
         font-size: 11px;
         padding-bottom: 40px;
       }
