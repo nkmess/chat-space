@@ -22,10 +22,11 @@
         %p.message-text hi
 
     .form 
-      = form_for [@group, @message], class: 'new-message' do |f|
-        .input-box
-          = f.text_field :body, class: 'form__text', placeholder: 'type a message'
-          = f.label :image, class: 'image-label' do
-            = fa_icon 'picture-o', class: 'icon'
-            = f.file_field :image, class: 'form__image'
-        = f.submit 'Send', class: 'form__submit-btn'
+      = form_for [@group, @message] do |f|
+        .inputbox
+          = f.text_field :body, class: 'inputbox__text', placeholder: 'type a message'
+          .inputbox__image
+            = f.label :image, class: 'inputbox__image__label' do
+              = fa_icon 'picture-o', class: 'icon'
+              = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
