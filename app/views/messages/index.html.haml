@@ -1,0 +1,32 @@
+.wrapper
+  = render 'messages/side'
+
+  .main
+    .main-header 
+      .current-group
+        %p.current-group__name sample
+        %p.member-list Member : aaa bbb
+      .edit-header
+        = link_to edit_group_path(current_user) do
+          .edit-header__btn Edit
+    .messages 
+      .message
+        .info
+          %p.info__user-name  aaa
+          %p.info__date 2019/5/1(Wed) 09:00:00
+        %p.message-text hello
+      .message
+        .info
+          %p.info__user-name  bbb
+          %p.info__date 2019/5/1(Wed) 09:03:00
+        %p.message-text hi
+
+    .form 
+      = form_for [@group, @message] do |f|
+        .inputbox
+          = f.text_field :body, class: 'inputbox__text', placeholder: 'type a message'
+          .inputbox__image
+            = f.label :image, class: 'inputbox__image__label' do
+              = fa_icon 'picture-o', class: 'icon'
+              = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
