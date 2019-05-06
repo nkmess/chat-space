@@ -32,9 +32,9 @@ Things you may want to cover:
 |password|string|null: false, unique: true|
 
 ### Association
-- has_many :messages
 - has_many :members
 - has_many :groups, through: :members
+- has_many :messages
 
 
 ## groupsテーブル
@@ -52,8 +52,8 @@ Things you may want to cover:
 ## membersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
 |group_id|integer|foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
