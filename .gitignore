@@ -17,3 +17,7 @@
 .byebug_history
 
 .DS_Store
+
+# Ignore uploaded test images.
+.public
+
