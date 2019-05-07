@@ -10,16 +10,7 @@
         = link_to edit_group_path(current_user) do
           .edit-header__btn Edit
     .messages 
-      .message
-        .info
-          %p.info__user-name  aaa
-          %p.info__date 2019/5/1(Wed) 09:00:00
-        %p.message-text hello
-      .message
-        .info
-          %p.info__user-name  bbb
-          %p.info__date 2019/5/1(Wed) 09:03:00
-        %p.message-text hi
+      = render @messages
 
     .form 
       = form_for [@group, @message] do |f|
