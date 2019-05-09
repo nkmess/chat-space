@@ -22,10 +22,13 @@ html, body {
           color: #333333;
           padding-top: 35px;
         }
-        .member-list {
+        &__members {
           font-size: 12px;
           color: #999999;
           padding-top: 15px;
+          .member {
+            display: inline-block;
+          }
         }
       }
       .edit-header {
@@ -65,7 +68,7 @@ html, body {
             color: #999999;
           }
         }
-        .message-text {
+        .body {
           font-size: 14px;
           color: #434A54;
           padding-bottom: 40px;
