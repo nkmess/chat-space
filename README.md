@@ -26,7 +26,6 @@ Things you may want to cover:
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false|
 |name|string|null: false, unique: true, add_index|
 |email|string|null: false, unique: true|
 |password|string|null: false, unique: true|
@@ -40,7 +39,6 @@ Things you may want to cover:
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false|
 |name|string|null: false|
 
 ### Association
