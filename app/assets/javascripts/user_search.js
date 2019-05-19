@@ -1,21 +1,21 @@
 $(function() {
 
-var search_list = $("#user-search-result");
+  var search_list = $("#user-search-result");
 
-function appendUserSearchHTML(user_name) {
-  var html = `<div class="chat-group-user clearfix">
-                <p class="chat-group-user__name">${user_name.name}</p>
-                <div class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${user_name.id}" data-user-name="${user_name.name}" >追加</div>
-              </div>`
-  search_list.append(html);
-}
+  function appendUserSearchHTML(user_name) {
+    var html = `<div class="chat-group-user clearfix">
+                  <p class="chat-group-user__name">${user_name.name}</p>
+                  <div class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${user_name.id}" data-user-name="${user_name.name}" >追加</div>
+                </div>`
+    search_list.append(html);
+  }
 
-function appendErrMsgToHTML() {
-  var html = `<div class="chat-group-user clearfix">
-                <p class="chat-group-user__name">一致するユーザーが見つかりません</p>
-              </div>`
-  search_list.append(html);
-}
+  function appendErrMsgToHTML() {
+    var html = `<div class="chat-group-user clearfix">
+                  <p class="chat-group-user__name">一致するユーザーが見つかりません</p>
+                </div>`
+    search_list.append(html);
+  }
 
   $('#user-search-field').on('keyup', function() {
     var input = $('#user-search-field').val();
