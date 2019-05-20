@@ -56,6 +56,6 @@ $(function() {
   });
 
   $(document).on('click', ".user-search-remove", function(){
-    $(this).parent().empty();
+    $(this).parent().remove();
   });
 });
