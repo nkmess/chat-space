@@ -41,8 +41,9 @@ $(document).on('turbolinks:load', function(){
       var html = buildHTML(data);
       $('.messages').append(html);
       $('#message_body').val('');
-      var position = $('.messages').get(0).scrollHeight;
-      $('.messages').animate({scrollTop: position});
+      scroll_view();
+      // var position = $('.messages').get(0).scrollHeight;
+      // $('.messages').animate({scrollTop: position});
     })
     .fail(function(data){
       alert('エラーが発生したためメッセージは送信できませんでした。');
