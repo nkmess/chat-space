@@ -40,7 +40,7 @@ $(document).on('turbolinks:load', function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html);
-      $('#message_body')[0].reset();
+      $('.new_message').get(0).reset();
       scroll_view();
     })
     .fail(function(data){
