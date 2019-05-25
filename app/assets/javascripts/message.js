@@ -21,10 +21,10 @@ $(document).on('turbolinks:load', function(){
                 </div>`
     return html;
   }
-  function scroll_view() {
-    var position = $('.messages').get(0).scrollHeight;
-      $('.messages').animate({scrollTop: position});
-  }
+  // function scroll_view() {
+  //   var position = $('.messages').get(0).scrollHeight;
+  //     $('.messages').animate({scrollTop: position});
+  // }
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var message = new FormData(this);
@@ -40,8 +40,9 @@ $(document).on('turbolinks:load', function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html);
-      $('#message_body')[0].reset();
-      scroll_view();
+      $('.new_message').get(0).reset();
+      var position = $('.messages').get(0).scrollHeight;
+      $('.messages').animate({scrollTop: position});
     })
     .fail(function(data){
       alert('エラーが発生したためメッセージは送信できませんでした。');
@@ -70,7 +71,8 @@ $(document).on('turbolinks:load', function(){
         });
       }
       $('.messages').append(insertHTML);
-      scroll_view();
+      var position = $('.messages').get(0).scrollHeight;
+        $('.messages').animate({scrollTop: position});
     })
     .fail(function() {
       alert('自動更新に失敗しました');

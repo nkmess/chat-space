@@ -19,5 +19,4 @@
 .DS_Store
 
 # Ignore uploaded test images.
-.public
-
+/public/*
