@@ -68,10 +68,10 @@ $(document).on('turbolinks:load', function(){
         if (messages.length !== 0){
           messages.forEach(function(message) {
             insertHTML += buildHTML(message);
+            scroll_view();
           });
         }
         $('.messages').append(insertHTML);
-        scroll_view();
       })
       .fail(function() {
         alert('自動更新に失敗しました');
