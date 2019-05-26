@@ -56,25 +56,27 @@ $(document).on('turbolinks:load', function(){
     var reload_url = window.location.href
     reload_url_pattern = '/messages';
     api_url = reload_url.replace(reload_url_pattern, '/api/messages');
-    $.ajax({
-      url: api_url,
-      type: 'get',
-      dataType: 'json',
-      data: {id: last_message_id},
-    })
-    .done(function(messages) {
-      var insertHTML = '';
-      if (messages.length !== 0){
-        messages.forEach(function(message) {
-          insertHTML += buildHTML(message);
-        });
-      }
-      $('.messages').append(insertHTML);
-      scroll_view();
-    })
-    .fail(function() {
-      alert('自動更新に失敗しました');
-    });
+    if (reload_url.match(/^(?=.*groups)(?=.*messages)/)) {
+      $.ajax({
+        url: api_url,
+        type: 'get',
+        dataType: 'json',
+        data: {id: last_message_id},
+      })
+      .done(function(messages) {
+        var insertHTML = '';
+        if (messages.length !== 0){
+          messages.forEach(function(message) {
+            insertHTML += buildHTML(message);
+          });
+        }
+        $('.messages').append(insertHTML);
+        scroll_view();
+      })
+      .fail(function() {
+        alert('自動更新に失敗しました');
+      });
+    }
   };
   setInterval(reloadMessages, 5000);
 });
