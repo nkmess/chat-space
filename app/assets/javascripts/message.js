@@ -57,7 +57,7 @@ $(document).on('turbolinks:load', function(){
     reload_url_pattern = '/messages';
     api_url = reload_url.replace(reload_url_pattern, '/api/messages');
     $.ajax({
-      url: 'http://localhost:3000/groups/47/api/messages',
+      url: api_url,
       type: 'get',
       dataType: 'json',
       data: {id: last_message_id},
