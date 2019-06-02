@@ -75,3 +75,4 @@ gem 'devise-i18n-views'
 gem 'pry-rails'
 gem 'carrierwave'
 gem 'mini_magick'
+..
