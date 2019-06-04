@@ -25,7 +25,6 @@ $(function() {
       var member_id = $('.chat-group-user input').eq(i).val();
       member_ids.push(member_id);
     }
-    console.log(member_ids)
     $.ajax({
       type: 'GET',
       url: '/users',
