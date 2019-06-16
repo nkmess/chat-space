@@ -60,6 +60,7 @@ $(function() {
                     <div class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</div>
                   </div>`
       $("#chat-group-users").append(html);
+      
     $(this).parent().remove();
   });
   $(document).on('click', ".user-search-remove", function(){
